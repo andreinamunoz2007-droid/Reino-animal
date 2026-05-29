@@ -1,0 +1,168 @@
+/* --- ESTILOS GENERALES Y LIMPIEZA --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e; 
+    color: white;
+    min-height: 100vh;
+}
+
+/* --- DISEÑO DEL MENÚ GENERAL --- */
+.header-glass {
+    position: fixed; 
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000; 
+}
+
+.navbar-glass {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 35px;
+    
+    /* Efecto cristal */
+    background: rgba(255, 255, 255, 0.08); 
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    border-radius: 50px; 
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); 
+}
+
+.navbar-glass .logo {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+.navbar-glass .logo span {
+    color: #00f2fe; 
+}
+
+.navbar-glass .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.navbar-glass .nav-menu a {
+    text-decoration: none;
+    color: #e2e8f0;
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-glass .nav-menu a:hover,
+.navbar-glass .nav-menu a.active {
+    color: #00f2fe;
+}
+
+/* Botón Buscar dentro del menú */
+.btn-buscar {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-buscar:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* --- SECCIÓN DE BIENVENIDA (Fondo e Imagen) --- */
+.seccion-bienvenida {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-image: url('fondo-animales.jpg'); /* Guarda tu imagen con este nombre */
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura al 50% */
+}
+
+.contenido-bienvenida {
+    position: relative; 
+    z-index: 10;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.contenido-bienvenida h1 {
+    font-size: 48px; 
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.contenido-bienvenida p {
+    font-size: 20px; 
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e2e8f0;
+}
+
+/* Botones sobre la imagen */
+.btn-bienvenida {
+    display: inline-block;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 242, 254, 0.3);
+}
+
+.btn-bienvenida:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 242, 254, 0.4);
+}
+
+.btn-secundario {
+    background: transparent;
+    border: 2px solid white;
+    box-shadow: none;
+}
+
+.btn-secundario:hover {
+    background: white;
+    color: #1a1a2e;
+}
